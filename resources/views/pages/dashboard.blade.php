@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    KKA Dashboard 
+    Kebun Kecil Atuk Dashboard 
 @endsection
 
 @section('content')

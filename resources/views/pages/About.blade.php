@@ -39,7 +39,9 @@ Untuk saat ini Kebun Kecil Atuk dapat menerima pemesanan di dalam daerah maupun 
 <p class="small">
 <i class="fa fa-envelope text-primary"> </i> KebunKecilAtuk@gmail.com <strong>|
 </strong>
-<img	class="small"src=" "	alt=""	width="14" height="14"> Kebun Kecil Atuk 
+<a href="https://www.instagram.com/kebunkecilatuk">
+    <img class="small"src="/images/icon-ig.png"	alt=""	width="14" height="14"/>
+</a> Kebun Kecil Atuk 
 </div>
 </div>
 </div>
