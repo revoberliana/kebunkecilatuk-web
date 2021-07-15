@@ -45,7 +45,7 @@
       Categories
     </a>
      <a href="{{ route('transaction.index')  }}"
-        class="list-group-item list-group-item-action {{ (request()->is('admin/product-gallery')) ? 'active' : '' }}"
+        class="list-group-item list-group-item-action {{ (request()->is('admin/transaction')) ? 'active' : '' }}"
         >
       Transaction
     </a>
