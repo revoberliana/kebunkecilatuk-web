@@ -48,9 +48,9 @@
                @foreach ($carts as $cart )
                <tr>
                 <td style="width: 28%;">
-                  @if ($cart->product->galleries)
+                  @if ($cart->product->galeries)
                       <img 
-                  src="{{ Storage::url($cart->product->galleries->first()->photos) }}" 
+                  src="{{ Storage::url($cart->product->galeries->first()->photos) }}" 
                   alt=""
                   class="cart-image"
                   />

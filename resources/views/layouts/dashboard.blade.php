@@ -137,7 +137,7 @@
                   Hi, {{ Auth::user()->name }}
                 </a>
                 <li class="nav-item">
-                  <a href="#" class="nav-link d-inline-dblock">
+                  <a href="{{ route('cart') }}" class="nav-link d-inline-dblock">
                         Cart
                   </a>
                 </li>

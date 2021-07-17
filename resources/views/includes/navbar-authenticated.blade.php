@@ -44,8 +44,8 @@
                   Hi,{{ Auth::user()->name }}
                 </a>
                 <div class="dropdown-menu">
-                  <a href="/dashboard.html" class="dropdown-item"></a>
-                  <a href="/dashboard-account.html" class="dropdown-item"></a>
+                  <a href="{{ route('dashboard') }}" class="dropdown-item"></a>
+                  <a href="{{ route('dashboard-settings-account') }}" class="dropdown-item"></a>
                   <div class="dropdown-divider"></div>
                   <a href="{{ route('logout') }}" class="dropdown-item">Logout</a>
                 </div>
