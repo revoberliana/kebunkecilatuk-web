@@ -61,7 +61,7 @@
 
             <ul class="navbar-nav d-block d-lg-none">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('dashboard') }}" class="nav-link">
                   Hi, {{ Auth::user()->name }}
                 </a>
                 <li class="nav-item">

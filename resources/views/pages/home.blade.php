@@ -42,7 +42,7 @@
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="/images/banner3.png"
+                      src="/images/banner3f.png"
                       alt="carousel Image"
                       class="d-block w-100"
                     />
