@@ -105,51 +105,6 @@
         </div>
       </div>
     </section>
-    <section class="store-review">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-lg-8 mt-3 mb-3">
-            <h5>Customer Review</h5>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-lg-8">
-            <ul class="list-unstyled">
-              <li class="media">
-                <img src="/images/icons-testimonials-1.jpg" 
-                alt="" 
-                class="mr-3 rounded-circle"
-                />
-                <div class="media-body">
-                  <h5 class="mt-2 mb-1">Amelia Dwi Indriani</h5>
-                  Bagus bangett tanemannya cocok banget buat ruang kerja ku
-                </div>
-              </li>
-              <li class="media">
-                <img src="/images/icons-testimonials-2.jpg" 
-                alt="" 
-                class="mr-3 rounded-circle"
-                />
-                <div class="media-body">
-                  <h5 class="mt-2 mb-1">Sufi J P</h5>
-                 Istri saya sangat menyukainya!!!
-                </div>
-              </li>
-              <li class="media">
-                <img src="/images/icons-testimonials-3.jpg" 
-                alt="" 
-                class="mr-3 rounded-circle"
-                />
-                <div class="media-body">
-                  <h5 class="mt-2 mb-1">Dakimu Wangi</h5>
-                  pertama kali melihat fotonya sudah langsung jatuh cinta 
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 </div>
 
