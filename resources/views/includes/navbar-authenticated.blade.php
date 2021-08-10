@@ -30,7 +30,7 @@
            <ul class="navbar-nav d-none d-lg-flex">
               <li class="nav-item dropdown">
                 <a
-                  href="#"
+                  href="{{ route('dashboard') }}"
                   class="nav-link"
                   id="navbarDropdown"
                   role="button"

@@ -15,7 +15,7 @@
                Welcome to Store
              </h2>
              <p>
-              Kamu sudah berhasil terdaftar di Kebun Kecil Atuk.
+              Pembayaran Berhasil
              </p>
              <div>
                <a href="/dashboard.html" class="btn btn-success w-50 mt-4">

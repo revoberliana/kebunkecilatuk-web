@@ -156,18 +156,4 @@ class ProductController extends Controller
         return redirect()->route('product.index');
     }
 
-   /* public function updateCartTambah($id){
-        $product = Product::find($id);
-        $id = $product->id;
-
-        $item = Cart::search(function($key, $value) use ($id){
-                return $key->id == $id;
-        })->first();
-        Cart::get($item->rowId);
-
-        Cart::update($item->rowId, $item->qty + 1);
-        $cart_content = Cart::content();
-
-        return view()
-    } */
 }
