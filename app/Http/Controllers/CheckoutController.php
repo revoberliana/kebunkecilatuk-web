@@ -54,68 +54,36 @@ class CheckoutController extends Controller
         //DELETE CART DATA
         Cart::where('users_id', Auth::user()->id)->delete();
 
-    }
-
-     public function callback(Request $request)
-      {
-        // Set konfigurasi midtrans
+    //konfigurasi midtrans
         Config::$serverKey = config('services.midtrans.serverKey');
         Config::$isProduction = config('services.midtrans.isProduction');
         Config::$isSanitized = config('services.midtrans.isSanitized');
         Config::$is3ds = config('services.midtrans.is3ds');
-
-        // Buat instance midtrans notification
-        $notification = new Notification();
-
-    
-        $status = $notification->transaction_status;
-        $type = $notification->payment_type;
-        $fraud = $notification->fraud_status;
-        $order_id = $notification->order_id;
-
-
-        if ($status == 'capture') {
-            if ($type == 'credit_card'){
-                if($fraud == 'challenge'){
-                    $transaction = Transaction::where('code', $order_id)->update([
-                            'transaction_status' => 'PENDING'
-                        ]);
-                }
-                else {
-                    $transaction = Transaction::where('code', $order_id)->update([
-                            'transaction_status' => 'SUCCESS'
-                        ]);
-                }
-            }
-        }
-        else if ($status == 'settlement'){
-             $transaction = Transaction::where('code', $order_id)->update([
-                            'transaction_status' => 'SUCCESS'
-                        ]);
-        }
-        else if($status == 'pending'){
-             $transaction = Transaction::where('code', $order_id)->update([
-                            'transaction_status' => 'PENDING'
-                        ]);
-        }
-        else if ($status == 'deny') {
-             $transaction = Transaction::where('code', $order_id)->update([
-                            'transaction_status' => 'CANCELLED'
-                        ]);
-        }
-        else if ($status == 'expire') {
-            $transaction = Transaction::where('code', $order_id)->update([
-                            'transaction_status' => 'CANCELLED'
-                        ]);
-        }
-        else if ($status == 'cancel') {
-            $transaction = Transaction::where('code', $order_id)->update([
-                            'transaction_status' => 'CANCELLED'
-                        ]);
-        }
-
-        // Simpan transaksi
-
-       return $transaction;
+     $midtrans = [
+         'transaction_details' => [
+             'order_id' => $code,
+             'gross_amount' => (int) $request->total_price 
+         ],
+         'customer_details' => [
+             'first_name' => Auth::user()->name,
+             'email' => Auth::user()->email,
+         ],
+         'enabled_payment' => [
+             'gopay','permata_va','bank_transfer'
+         ],
+         'vtweb' =>[]
+        ];
+      try {
+          $paymentUrl = Snap::createTransaction($midtrans)->redirect_url;
+         return redirect($paymentUrl);
+      }
+          catch (Exception $e) {
+          echo $e->getMessage();
+      }
     }
+
+     public function callback(Request $request)
+    { 
+    }
+
 }
